@@ -1,0 +1,26 @@
+<h2>Products</h2>
+<hr>
+
+<button 
+class="btn btn-primary"
+(click)="NewPanelIsHidden=false">
+    New Product
+</button>
+<button
+class="btn btn-secondary mx-3">
+    Filter
+</button>
+<hr>
+
+<app-table-items
+    [items]="products"
+></app-table-items>
+
+<div 
+class="mt-3">
+    <app-new-form
+    (onSubmit)="handleSubmitNewProduct($event)"
+    (onClose)="NewPanelIsHidden=true"
+    [hidden]="NewPanelIsHidden">
+    </app-new-form>
+</div>
