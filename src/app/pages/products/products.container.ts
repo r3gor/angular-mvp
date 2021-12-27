@@ -26,4 +26,8 @@ export class ProductsContainer implements OnInit {
     this.ps.postItem(value)
   }
 
+  refreshProducts() {
+    this.ps.loadItems()
+  }
+
 }
